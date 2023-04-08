@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> Database</title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+            <a href="http://127.0.0.1:8000/">Home </a>
+            <a href="http://127.0.0.1:8000/customer">Customer</a>
+            <a href="http://127.0.0.1:8000/login" >Seller</a>
+        </div>
+    <br><br>
+    <!--SellerName, ProductName, ManufactureDate, HashValue,TimeStamp-->
+        <center>
+        <h3>Seller Details</h3>  
+<table border=5>  
+    <thead>  
+        <td>Seller Name</td>  
+        <td>Product Name</td>  
+        <td>Manufacture Date</td>   
+        <td>HashValue</td>  
+        <td>TimeStamp</td>
+        
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td>{{row["SellerName"]}}</td>  
+            <td>{{row["ProductName"]}}</td>  
+            <td>{{row["ManufactureDate"]}}</td>  
+            <td>{{row["HashValue"]}}</td>
+            <td>{{row["TimeStamp"]}}</td>
+            
+        </tr>  
+      
+    {% endfor %}  
+</table>
+
+</center>
+
+
+    </body>

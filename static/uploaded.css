@@ -1,0 +1,26 @@
+img {
+    height: 200px;
+    width: 200px;
+}
+.btn {
+    background-color: #FFAE03;
+    border: none;
+    border-radius: 8px;
+    height: 60px;
+    width: 250px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #FFAE03;
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    background-color: white;
+    color: #FFAE03;
+    border: 2px solid #FFAE03;
+    font-weight: bold;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+    }

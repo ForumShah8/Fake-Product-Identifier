@@ -1,0 +1,47 @@
+<html>  
+<head>  
+<title>Product Information</title>  
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../static/base.css">
+<link rel="stylesheet" type="text/css" href="../static/uploaded.css">
+</head>  
+<body>  
+    <div class="topnav">
+        <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+        
+        <a href="http://127.0.0.1:8000/">Home </a>
+        <a href="http://127.0.0.1:8000/customer">Customer</a>
+        <a href="http://127.0.0.1:8000/login" >Seller</a>
+    </div>
+
+<center>
+    
+{%if rows%}
+    {% for row in rows %}  
+<center>    
+    <h1> Product Details: </h1>  
+    <img src="../static/images/10.png" >
+<div class="productdetails">
+  
+  <h2>Name of the Seller:  {{row["SellerName"]}}</h2>
+  <h2>Name of the Product:  {{row["ProductName"]}}</h2>
+  <h2>Date Of Manufacture:  {{row["ManufactureDate"]}}</h2>
+  
+</div>
+
+{% endfor %} 
+
+<br> 
+<center> 
+<div>
+{% else %}
+<img src="../static/images/13.jpg" >
+<h2><center>NO DATA FOUND</h2>
+<h3>It seems that the Product you are looking for is not registered with us or is a fake product!!</h3>
+
+</div>
+{%endif%}
+<a href="http://127.0.0.1:8000/customer"><input type = "button" value="Return" class="btn"></a>
+</center>    
+</body>  
+</html>  

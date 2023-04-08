@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>SELLER</title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+       <link rel="stylesheet" type="text/css" href="../static/seller.css">
+        
+    </head>
+    <body>
+        
+            
+        <div class="topnav">
+            <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+            
+            <a href="http://127.0.0.1:8000/">Home </a>
+            <a href="http://127.0.0.1:8000/customer">Customer</a>
+            <a href="http://127.0.0.1:8000/login" >Seller</a>
+        </div>
+    <br><br>
+    <center>
+            
+        <div class="formdiv">
+        <form action="/registered" method="POST" class="productform">
+           
+            <input type = "text" name="sname" required="required" class="box" placeholder="COMPANY OR SELLER NAME">
+            <br><br>
+            
+            <input type = "text" name="pname" required="required" class="box" placeholder="PRODUCT NAME">
+            <br><br>
+            <label>Date of Manufacture: </label><br>
+            <input type = "date" name="mdate" required class="box"> 
+            
+            <br><br>
+            
+            <input type= "submit" value="Register the Product" class="btn"  > 
+            
+            <br><br>
+            <a href = "/login"> 
+                <input type = "button" value="Log Out" class="btn">
+            </a>
+            <br>
+            <br>
+            <!--
+            <a href="/database"><input type = "button" value = "See the Database" class="btn"></a>
+            -->
+        </form>
+        </div>
+    </center> 
+</body>
+</html>
+

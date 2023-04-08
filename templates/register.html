@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> SELLER REGISTRATION </title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+        <link rel="stylesheet" type="text/css" href="../static/register.css">
+        
+    </head>
+    <body> 
+        <center>
+          <div class="topnav">
+            <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+            <a href="http://127.0.0.1:8000/">Home </a>
+            <a href="http://127.0.0.1:8000/customer">Customer</a>
+            <a href="http://127.0.0.1:8000/login" >Seller</a>
+        </div>
+    <br>
+          <div class="alert"> 
+          {{msg}}
+          </div>
+          
+          <center>
+      <form action="/seller_registered" method="POST" class="registerform">
+      <!--  
+      <input type="text" placeholder="SELLER NAME"required="required" name="sname" class="box">
+      <input type="text" placeholder="DOMAIN NAME" required="required" name="domain" class="box"><br>
+      <input type="text" placeholder="WEBSITE URL"required="required" name="url" class="box">
+      <input type="email" placeholder="EMAIL ADDRESS"required="required" name="email" class="box"><br>
+      <input type="password" minlength="8" placeholder="PASSWORD" required="required" class="box" name="password">
+       <input type="tel"  placeholder="CONTACT NUMBER" required name="contactnumber" class="box"><br>
+       <input type="text" placeholder="POSTAL ADDRESS" name="address" class="box">
+       <input type="text" placeholder="COUNTRY" name="country" class="box"><br>
+       <input type="text" placeholder="STATE" name="state" class="box">
+      <input type="text" placeholder="PINCODE" name="pincode" class="box"><br>
+      <hr>
+      -->
+      <input type="text" placeholder="CIN NUMBER" required="required" name="cin" class="box">
+      <input type="text" placeholder="COMPANY NAME" required="required" name="cname" class="box">
+      <input type="text" placeholder="WEBSITE URL" required="required" name="url" class="box">
+      <input type="email" placeholder="EMAIL ADDRESS"required="required" name="email" class="box">
+      <input type="password" minlength="8" placeholder="PASSWORD" required="required" class="box" name="password">
+      <input type="text" placeholder="REGISTERED ADDRESS" required="required" name="address" class="box">
+      <hr>
+        <input type="checkbox"name="checkbox" required>
+        <label class="terms">I agree that above entered 
+          information is correct.</label><br>
+        <br>
+      <input type="Submit" value="Register" class="btn btn1">
+     <a href="/login"> <input type ="button" value="Return" class="btn"></a>
+    </form>
+</center>
+</body>
+</html>

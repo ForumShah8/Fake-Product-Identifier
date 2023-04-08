@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Customer</title>
+        
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+        <link rel="stylesheet" type="text/css" href="../static/customer.css">
+    </head>
+    <center>
+    <body>
+        
+        <div class="topnav">
+            <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+            <a href="http://127.0.0.1:8000/">Home </a>
+            <a href="http://127.0.0.1:8000/customer" class="active" >Customer</a>
+            <a href="http://127.0.0.1:8000/login" >Seller</a>
+        </div>
+    <br><br>
+    <h2 ><center> You can either upload the PNG file of the QR Code, 
+        or you can Scan the QR Code Live Using  Webcam </h2>
+        
+        <div class="qrfile">
+            <form action="/uploaded" method="POST" enctype="multipart/form-data">
+                <!--
+           <h2 style="color:#034f84"> <center>Upload the Image of QR Code from your Mobile Phone or Laptop</h2>
+            -->
+            Upload the Image of QR Code from your Mobile Phone or Laptop
+            <br><br>
+
+            <input type="file" name="file" class="inp"/> 
+            <br> <br>
+            <input type="submit" value="Get Product Information" class="btn2">
+        </form>
+           </div>
+        
+        <!--
+        <iframe src = "http://127.0.0.1:8000/qrfile" class="frameleft">
+        </iframe>
+         <iframe src = "http://127.0.0.1:8000/qrlive" class="frameright">
+       </iframe>
+      
+       -->
+      <b style="margin-left:-50px">OR</b>
+        
+        <div class="qrlive">
+       <!--     
+       <h2 style="color:#034f84"> <center>To Scan the QR Code Using Webcam Click the Button 
+       </h2>
+       -->
+       To Scan the QR Code Using Webcam Click the Button
+       <br><br><br><br>
+        <a href="http://127.0.0.1:8000/webcam"><input type = "button" value="Capture Live Image" class="btn2"></a>
+    </div>
+        
+
+<br><br>        
+<a href="http://127.0.0.1:8000/"><input type = "button" value="Return to HomePage" class="btn"></a>
+    
+    </body>
+</center>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Company Database</title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+            <a href="http://127.0.0.1:8000/">Home </a>
+            <a href="http://127.0.0.1:8000/customer">Customer</a>
+            <a href="http://127.0.0.1:8000/login" >Seller</a>
+        </div>
+    <br><br>
+        <center>
+        <h3>Company Details</h3>  
+<table border=5>  
+    <thead>  
+        <td>cin</td>  
+        <td>cname</td>  
+        <td>URL</td>   
+        <td>Email</td>  
+        <td>Password</td>
+        <td>Address</td>
+        
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td>{{row["cin"]}}</td>  
+            <td>{{row["companyname"]}}</td>  
+            <td>{{row["url"]}}</td>  
+            <td>{{row["email"]}}</td>
+            <td>{{row["password"]}}</td>
+            <td>{{row["address"]}}</td> 
+            
+        </tr>  
+      
+    {% endfor %}  
+</table>
+
+</center>
+
+
+    </body>

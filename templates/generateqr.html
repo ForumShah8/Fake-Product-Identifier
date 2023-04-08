@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Generate QR CODE </title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+        <link rel="stylesheet" type="text/css" href="../static/generateqr.css">
+
+    </head>
+    <body>
+        <div class="topnav">
+            <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+            <a href="http://127.0.0.1:8000/">Home </a>
+            <a href="http://127.0.0.1:8000/customer">Customer</a>
+            <a href="http://127.0.0.1:8000/login" >Seller</a>
+        </div>
+    <br><br>
+        <center>
+        <h2> <center>
+        Right click and download the generated QR Code 
+        </center> </h2>
+        
+        <img id="picture" src="data:image/jpeg;base64,{{ img_data }}" height = "400px" width="400px">
+
+        <br>
+        <a href="/seller">  <input type="button" value="Enter new product" class="btn"></a>
+        </center>
+    </body>
+    </html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title> SELLER LOGIN </title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+        <link rel="stylesheet" type="text/css" href="../static/login.css">
+    </head>
+    <body> 
+        <center> 
+            <div class="topnav">
+                <span class="title"> FAKE PRODUCT IDENTIFIER</span>
+                <a href="http://127.0.0.1:8000/">Home </a>
+                
+                <a href="http://127.0.0.1:8000/customer" >Customer</a>
+                <a href="http://127.0.0.1:8000/login" class="active" >Seller</a>
+            </div>
+                <div class="login"> 
+                <br>
+                <h1> Login to Your Account </h1>
+                <span class="alert">
+                    {%for msg in msg%}
+
+                      {{msg}} 
+                      {%endfor%}
+                </span>
+                <form action="/seller_login " method="POST" class="loginform">
+                    <input type="text" class="box" placeholder="COMPANY OR SELLER NAME" required="required" name = "sname">
+                    <br>
+                    <input type="text" class="box" placeholder="EMAIL ADDRESS" required="required" name="email">
+                    <br>
+                    <input type="password" class="box pswd" placeholder="PASSWORD" id="password" required="required" name="password">
+                    <br>
+                    <input type= "checkbox" onclick = "myFunction()" class="pswdvisible">
+                        <label>Show password</label>
+                    
+                        <script> 
+                        function myFunction() {
+                            var x = document.getElementById("password");
+                            if (x.type === "password") {
+                              x.type = "text";
+                            } else {
+                              x.type = "password";
+                            }
+                          }
+                          </script>
+                    <br>
+                     <input type="submit" Value = "Log In" class="btn1">
+                    <br>
+                </form>
+             </div>
+             <!--
+             
+                   <a href="/"> <input type="button" Value = "Home Page" class="btn1 bluebtn btn"></a>
+                   -->
+                <div class="signup"> 
+                    <br>
+                    <h1 class="h1sign"> New Here? </h1>
+                    <p class="para">Sign up and get your products registered with us! </p>
+                    <br> 
+                    <a href="/register"> <input type="button" Value = "Sign Up" class="btn2"></a>
+
+                </div>
+            </body>
+            </html>
